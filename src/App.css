@@ -1,38 +1,104 @@
+/* App.css */
 .App {
+  font-family: Arial, sans-serif;
+  max-width: 600px;
+  margin: 0 auto;
   text-align: center;
+  color: #ccc;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.title {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.chatbot {
   display: flex;
   flex-direction: column;
+  height: 90vh;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #333;
+  margin-inline: 4%;
+
+}
+
+.model-selector{
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding-inline: 4px;
+  padding-block: 8px;
+  background-color:#007bff;
+  color: #fff;
 }
 
-.App-link {
-  color: #61dafb;
+.model-selection{
+  background-color: #333;
+  color: #fff;
+  padding: 6px;
+  margin-inline: 4px;
+  border-radius: 8px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.messages {
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
+  position:relative;
+}
+
+.input-bar {
+  display: flex;
+  border-top: 1px solid #ccc;
+}
+
+.input-bar textarea {
+  flex: 9;
+  padding: 10px;
+  border: none;
+  font-size: large;
+}
+
+.input-bar button {
+  padding: 10px;
+  flex: 1;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+}
+
+.chat-message {
+  padding: 8px 12px;
+  margin: 6px 0;
+  border-radius: 8px;
+  max-width: 80%;
+}
+
+.chat-content{
+  display: flex;
+  flex-direction: row;
+  
+}
+
+.chat-message.user {
+  align-self: flex-end;
+  background-color: #007bff;
+  max-width: 80%;
+  text-align: left;
+  color: #fff;
+  margin-left: 20%;
+  border-radius: 12px;
+}
+
+.chat-message.bot {
+  align-self: flex-start;
+  color: #333;
+  text-align: left;
+  max-width: 80%;
+  
 }

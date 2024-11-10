@@ -1,23 +1,18 @@
-import logo from './logo.svg';
+// App.js
+import React from 'react';
+import Chatbot from './Chatbot';
 import './App.css';
+import botLogo from './illustrations/Rectangle_50.png';
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className='title'>
+        <img src={botLogo} alt='bot-logo' width={50} height={50}/>
+      <h1>Akash Opensource AI Chatbot</h1>
+      </div>
+      <Chatbot />
     </div>
   );
 }
