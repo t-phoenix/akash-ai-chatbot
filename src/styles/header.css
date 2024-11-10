@@ -80,3 +80,9 @@
     left: 10px;
     z-index: 11;
   }
+
+  .pencil{
+    font-size:24px ;
+    cursor: [pointer];
+    
+  }

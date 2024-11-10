@@ -17,12 +17,13 @@
 .chatbot {
   display: flex;
   flex-direction: column;
-  height: 90vh;
+  justify-content: center;
+  height: 100vh;
   border: 1px solid #ccc;
   border-radius: 8px;
   overflow: hidden;
   background-color: #333;
-  margin-inline: 4%;
+ 
 
 }
 
@@ -43,6 +44,12 @@
   padding: 6px;
   margin-inline: 4px;
   border-radius: 8px;
+  width: 40%;
+  font-size: 12px;
+}
+
+.model-selection-option{
+  font-style: normal;
 }
 
 .messages {

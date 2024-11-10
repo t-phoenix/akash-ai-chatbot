@@ -2,8 +2,9 @@
 import React, { useEffect, useRef, useState } from "react";
 import axios from "axios";
 import ChatMessage from "./components/ChatMessage";
-import "./loader.css";
-import "./styles/sidebar.css";
+import "./styles/loader.css";
+import "./styles/header.css";
+import ModelSelector from "./components/ModelSelector";
 
 const Chatbot = () => {
   const [messages, setMessages] = useState([
@@ -102,16 +103,31 @@ const Chatbot = () => {
       return;
     }
     const newChat = { name: chatName, messages };
-    const updatedChats = [...savedChats, newChat];
+
+    const existingChatIndex = savedChats.findIndex(
+      (chat) => chat.name === chatName
+    );
+
+    let updatedChats;
+    if (existingChatIndex !== -1) {
+      // Update the existing chat by replacing it
+      updatedChats = [...savedChats];
+      updatedChats[existingChatIndex] = newChat;
+    } else {
+      // Add the new chat if it doesn't exist
+      updatedChats = [...savedChats, newChat];
+    }
+
     localStorage.setItem("savedChats", JSON.stringify(updatedChats));
     setSavedChats(updatedChats);
     setChatName("");
   };
 
   //   // Load a saved chat session
-    const loadChat = (chat) => {
-      setMessages(chat.messages);
-    };
+  const loadChat = (chat) => {
+    setChatName(chat.name);
+    setMessages(chat.messages);
+  };
 
   // Delete a saved chat
   const deleteChat = (name) => {
@@ -120,15 +136,6 @@ const Chatbot = () => {
     setSavedChats(updatedChats);
   };
 
-  // LOAD the Chat
-//   const loadChat = () => {
-//     const savedChat = JSON.parse(localStorage.getItem("savedChat"));
-//     if (savedChat) {
-//       setMessages(savedChat);
-//     } else {
-//       alert("No chat history found.");
-//     }
-//   };
 
   // Start New Chat
   const startNewChat = () => {
@@ -141,59 +148,30 @@ const Chatbot = () => {
         <div className="hamburger" onClick={toggleSidebar}>
           &#9776; {/* Hamburger Icon (Unicode character) */}
         </div>
-        <label htmlFor="model-select">Choose Model: </label>
-        <select
-          id="model-select"
-          value={selectedModel}
-          onChange={(e) => setSelectedModel(e.target.value)}
-          className="model-selection"
-        >
-          <option
-            className="model-selection"
-            value="Meta-Llama-3-1-8B-Instruct-FP8"
-          >
-            Meta-Llama-3-1-8B-Instruct-FP8
-          </option>
-          <option
-            className="model-selection"
-            value="Meta-Llama-3-1-405B-Instruct-FP8"
-          >
-            Meta-Llama-3-1-405B-Instruct-FP8
-          </option>
-          <option
-            className="model-selection"
-            value="Meta-Llama-3-2-3B-Instruct"
-          >
-            Meta-Llama-3-2-3B-Instruct
-          </option>
-          <option
-            className="model-selection"
-            value="nvidia-Llama-3-1-Nemotron-70B-Instruct-HF"
-          >
-            nvidia-Llama-3-1-Nemotron-70B-Instruct-HF
-          </option>
-        </select>
-        <button onClick={startNewChat}>Start New Chat</button>
+        <ModelSelector selectedModel={selectedModel} setSelectedModel={setSelectedModel}/>
+        <div className="pencil" onClick={startNewChat}>&#9998;</div>
       </div>
       {/* Sidebar Menu */}
       <div className={`sidebar ${isSidebarOpen ? "open" : ""}`}>
         <div>
-        <h3>Saved Chats</h3>
-        <br/>
-        <ul>
-          {savedChats.map((chat, index) => (
-            <li key={index}>
-              <span>{chat.name}</span>
-              <div>
-              <button onClick={() => loadChat(chat)}>Load</button>
-              <button onClick={() => deleteChat(chat.name)}>Delete</button>
-              </div>
-            </li>
-          ))}
-        </ul>
+          <h3>Saved Chats</h3>
+          <br />
+          <ul>
+            {savedChats.map((chat, index) => (
+              <li key={index}>
+                <span>{chat.name}</span>
+                <div>
+                  <button onClick={() => loadChat(chat)}>Load</button>
+                  <button onClick={() => deleteChat(chat.name)}>Delete</button>
+                </div>
+              </li>
+            ))}
+          </ul>
         </div>
         <div className="close-button-box">
-            <button className="close-sidebar" onClick={toggleSidebar}>Close</button>
+          <button className="close-sidebar" onClick={toggleSidebar}>
+            Close
+          </button>
         </div>
       </div>
       <div className="messages">

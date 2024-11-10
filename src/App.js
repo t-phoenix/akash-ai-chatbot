@@ -9,8 +9,8 @@ function App() {
   return (
     <div className="App">
       <div className='title'>
-        <img src={botLogo} alt='bot-logo' width={50} height={50}/>
-      <h1>Akash Opensource AI Chatbot</h1>
+        {/* <img src={botLogo} alt='bot-logo' width={50} height={50}/>
+        <h1>Akash Opensource AI Chatbot</h1> */}
       </div>
       <Chatbot />
     </div>
