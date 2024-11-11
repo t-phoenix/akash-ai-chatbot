@@ -1,31 +1,45 @@
-/* Sidebar Styles */
-.sidebar {
-    width: 300px;
-    height: 0%;
-    background-color: #dadada;
-    color: #444;
-    padding: 0px;
-    transform: translateX(-100%);
-    transition: transform 0.3s ease;
-    z-index: 10;
-  }
-  
+/* Header Styles */
+
+.header-bar{
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+  align-items: center;
+  padding-inline: 2%;
+  padding-block: 8px;
+  background-color:#303030;
+  color: #fff;
+}
+ 
   .sidebar.open {
-    top: 14%;
+    width: 250px;
+    top: 8%;
     left: 10;
     position: fixed;
     height: 60%;
-    background-color: #dadada;
-    transform: translateX(0%);
+    background-color: #404040;
+    color: #ffffff;
+    transform: translateY(0%);
+    transition: transform 2s ease;
     z-index: 10;
-    padding-block: 24px;
+    padding: 16px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-  }
+    align-items: start;
+    border-radius: 4px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: antiquewhite;
+  } 
+  
   
   .sidebar h3 {
     margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
   }
   
   .sidebar ul {
@@ -41,6 +55,23 @@
     font-size: large;
     font-weight: 600;
     font-family:fantasy;
+    color: #fff;
+  }
+
+  .nav-link-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+  }
+  
+  .nav-link{
+    font-size: small;
+    font-weight: 600;
+    font-family:fantasy;
+    color: #ffffff;
+    padding: 4px;
+    margin: 4px;
   }
   
   .sidebar button {
@@ -54,35 +85,63 @@
   }
 
   .close-button-box{
+    width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: end;
-    padding-inline: 16px;
+    justify-content: flex-start;
+    align-items: center;
+    padding-inline: 0px;
   }
   
-  .close-sidebar {
-    background-color: #444;
-    color: white;
-    padding: 9px;
-    width: 80px;
-    border: none;
-    border-radius: 3px;
+  .close-sidebar-button {
+    background-color: #fff;
+    color: rgb(49, 49, 49);
+    width: 20%;
+    padding-block: 2px;
+    padding-inline: 8px;
+    border-width: 2px;
+    border: solid;
+    border-color: #4b4b4b;
+    border-radius: 8px;
     cursor: pointer;
-    margin-top: 20px;
+    margin-top: 0px;
+  }
+
+  .model-selector{
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-start;
+    align-items: center;
+    padding-inline: 4px;
+    padding-block: 8px;
+    background-color:#303030;
+    color: #fff;
+  }
+  
+  .model-selection{
+    background-color: #333;
+    color: #fff;
+    padding: 6px;
+    border-radius: 8px;
+    width: 60%;
+    font-size: 12px;
+  }
+  
+  .model-selection-option{
+    font-style: normal;
   }
   
   /* Hamburger Icon Styles */
   .hamburger {
-    font-size: 24px;
+    font-size: 32px;
     cursor: pointer;
     padding: 10px;
     top: 10px;
     left: 10px;
-    z-index: 11;
   }
 
   .pencil{
-    font-size:24px ;
+    font-size:22px ;
     cursor: [pointer];
-    
+    margin-right: 10px;
   }

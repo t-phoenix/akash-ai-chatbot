@@ -1,0 +1,97 @@
+
+.landing-page{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    width: 100%;
+    height: 100%;
+    
+}
+
+.landing-title{
+    width: 80%;
+    margin-block: 20px;
+    margin-inline: 10%;
+}
+
+.landing-title h1{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    text-align: left;
+    font-size:32px;
+    font-family: cursive;
+}
+
+.landing-cards-box{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    height: 32vh;
+    width: 100%;
+    margin-block: 4%;
+    font-family: fantasy;
+}
+
+.card1{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    width: 40%;
+    height: 80%;
+    background-color: rgb(182, 239, 125);
+    color: black;
+    margin-inline: 2%;
+    margin-block: 2%;
+    padding: 4%;
+    border-radius: 16px;
+    text-align: left;
+
+}
+
+.card2-grid{
+    width: 40%;
+    height: 96%; 
+    margin-block: 2%;
+    padding:1%;
+}
+
+.card2{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    color: black;
+    position: relative;
+    width: 100%;
+    height: 40%;
+    margin-block: 4%;
+    padding: 6%;
+    border-radius: 16px;
+}
+
+.color-bg1{
+    background-color: rgb(195, 142, 245);
+}
+
+.color-bg2{
+    background-color: rgb(132, 185, 241);
+}
+.card-icons{
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 8%;
+    padding-inline: 4%;
+}
+
+
+.prompt-box{
+    width: 88%;
+    margin-inline: 6%;
+}

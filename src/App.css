@@ -27,14 +27,15 @@
 
 }
 
-.model-selector{
+/* Refer in header.css */
+/* .model-selector{
   display: flex;
   flex-direction: row;
   justify-content:space-between;
   align-items: center;
   padding-inline: 4px;
   padding-block: 8px;
-  background-color:#007bff;
+  background-color:#353636;
   color: #fff;
 }
 
@@ -51,7 +52,11 @@
 .model-selection-option{
   font-style: normal;
 }
+ */
 
+
+
+/* // MESSAGES */
 .messages {
   flex: 1;
   padding: 10px;
