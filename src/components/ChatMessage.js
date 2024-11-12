@@ -10,10 +10,12 @@ const ChatMessage = ({ role, content }) => {
   return (
     <div className={`chat-message ${isUser ? 'user' : 'bot'}`}>
         {role === 'user' ? 
+            // USER
             <div className='chat-content'>
                 <img src={userbot} alt='user-img' width={50} height={50}/>
                 <p>{content}</p>
             </div>: 
+            // BOT
             <div className='chat-content'>
                 <img src={chatbot} alt='user-img' width={50} height={50} />
                 <MessageFormatter message={content} />
