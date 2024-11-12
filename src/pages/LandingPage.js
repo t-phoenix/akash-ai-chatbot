@@ -1,6 +1,6 @@
 import React from "react";
 import "../styles/landing.css";
-import { MdMessage } from "react-icons/md";
+import { MdCopyright, MdMessage } from "react-icons/md";
 import { MdArrowOutward } from "react-icons/md";
 import { MdWallpaper } from "react-icons/md";
 import { MdVideocam } from "react-icons/md";
@@ -16,21 +16,21 @@ import { useNavigate } from "react-router-dom";
 const cardData = [
   {
     id: 1,
-    color: "#b2ff59",
+    color: "#f1f751",
     icon: "👨‍💻",
     text: "What is the best business to start in...",
     link: "/business",
   },
   {
     id: 2,
-    color: "#d4aaff",
+    color: "#e27b62",
     icon: "💌",
     text: "I need some wedding card inspiration...",
     link: "/wedding",
   },
   {
     id: 3,
-    color: "#1ecbe1",
+    color: "#d4aaff",
     icon: "🎥",
     text: "Create me a short presentation on Li...",
     link: "/presentation",
@@ -135,8 +135,9 @@ export default function LandingPage() {
             justifyContent: "start",
           }}
         >
-          {cardData.map((card) => (
+          {cardData.map((card, index) => (
             <motion.div
+              key={index}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="prompt-card"
@@ -213,6 +214,11 @@ export default function LandingPage() {
             <img src={art6} alt={`Art-1`} />
           </motion.div>
         </div>
+      </div>
+
+      <div className="landing-footer">
+          <p style={{margin: '2px', display:'flex', flexDirection: 'row', alignItems:'center'}}>Akash AI<MdCopyright size={16} style={{marginRight:'6px'}}/> 2024</p>
+          <p style={{margin: '2px'}}>Cookie Preferences</p>
       </div>
     </div>
   );

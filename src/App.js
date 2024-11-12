@@ -4,18 +4,19 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
-  Link,
   useNavigate,
 } from "react-router-dom";
 // import Chatbot from "./Chatbot";
 import { FaPencil } from "react-icons/fa6";
 import "./App.css";
 import "./styles/header.css";
-import ModelSelector from "./components/ModelSelector";
+// import ModelSelector from "./components/ModelSelector";
 import LandingPage from "./pages/LandingPage";
 import ChatBoxPage from "./pages/ChatBoxPage";
+import AboutPage from "./pages/About";
 import robot2 from "../src/illustrations/robot2.png";
 import { motion } from "framer-motion";
+import Sidebar from "./components/Sidebar";
 
 function App() {
   const sidebarRef = useRef();
@@ -32,6 +33,7 @@ function App() {
   const [selectedModel, setSelectedModel] = useState(
     "Meta-Llama-3-1-8B-Instruct-FP8"
   );
+
 
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -71,6 +73,7 @@ function App() {
 
   // Load a saved chat session
   const loadChat = (chat) => {
+    navigate('/chatbox')
     setChatName(chat.name);
     setMessages(chat.messages);
   };
@@ -102,7 +105,7 @@ function App() {
               alignItems: "center",
             }}
           >
-            <img src={robot2} alt="Bot" width={30} height={30} /> AKASH AI
+            <img src={robot2} alt="Bot" width={30} height={30} style={{marginRight: '4px'}}/> AKASH AI
           </h2>
 
           <motion.div
@@ -116,54 +119,7 @@ function App() {
         </div>
         {/* Sidebar Menu */}
         {isSidebarOpen ? (
-          <div ref={sidebarRef} className={`sidebar open`}>
-            
-            <div style={{width:'100%'}}>
-              {/* NAVIGATION */}
-              <div style={{ marginBlock: "8%" }}>
-                <h3>Navigation</h3>
-                <div className="nav-link-box">
-                  <Link className="nav-link" to="/">
-                    Home
-                  </Link>
-                  <Link className="nav-link" to="/chatbox">
-                    ChatBot
-                  </Link>
-                </div>
-              </div>
-              {/* CHATS */}
-              <div style={{ marginBlock: "16%", width: '100%' }}>
-                <h3>Saved Chats</h3>
-                <br />
-                <ul>
-                  {savedChats.map((chat, index) => (
-                    <li key={index} className="">
-                      <span>{chat.name}</span>
-                      <div>
-                        <motion.button whileHover={{scale: 1.1}} whileTap={{scale:0.9}} onClick={() => loadChat(chat)}>Load</motion.button>
-                        <motion.button whileHover={{scale: 1.1}} whileTap={{scale:0.9}} onClick={() => deleteChat(chat.name)}>
-                          Delete
-                        </motion.button>
-                      </div>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              {/* NAV AND CHAT ENDS */}
-            </div>
-
-            {/* SIDEBAR FOOTER */}
-            <div className="close-button-box">
-              <ModelSelector
-                selectedModel={selectedModel}
-                setSelectedModel={setSelectedModel}
-              />
-              <div className="close-sidebar-button" onClick={toggleSidebar}>
-                Close
-              </div>
-            </div>
-            {/* SIDEBAR FOOTER ENDS*/}
-          </div>
+          <Sidebar sidebarRef={sidebarRef} savedChats={savedChats} selectedModel={selectedModel} setSelectedModel={setSelectedModel} toggleSidebar={toggleSidebar} loadChat={loadChat} deleteChat={deleteChat}/>
         ) : (
           <></>
         )}
@@ -172,7 +128,7 @@ function App() {
 
       <div>
         <Routes>
-          <Route path="/" element={<LandingPage />} />
+          <Route path="/" element={<LandingPage/>} />
           <Route
             path="/chatbox"
             element={
@@ -187,6 +143,7 @@ function App() {
               />
             }
           />
+          <Route path="/about" element={<AboutPage/>}/>
         </Routes>
       </div>
     </div>

@@ -1,0 +1,40 @@
+.about-page {
+    max-width: 600px;
+    min-height: 80vh;
+    margin: 0 auto;
+    padding: 20px;
+    color: #ccc;
+    text-align: left;
+}
+
+.about-page h2 {
+    color: #007bff;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.about-page h3 {
+    color: #007bff;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.about-page p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.about-page ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.about-page li {
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+.about-page strong {
+    color: #007bff;
+}

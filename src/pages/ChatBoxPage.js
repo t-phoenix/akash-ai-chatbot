@@ -16,7 +16,7 @@ export default function ChatBoxPage({
 }) {
   const location = useLocation();
   const data = location.state;
-    const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const botMessageStartRef = useRef(null);
   const [loading, setLoading] = useState(false);
@@ -27,15 +27,15 @@ export default function ChatBoxPage({
   const API_KEY = "sk-TADQ3qUJSc_ZgGywE4x2Tg"; // Replace with your API key
   const BASE_URL = "https://chatapi.akash.network/api/v1";
 
-//   if (data) {
-//     setInput(data);
-//   }
+  //   if (data) {
+  //     setInput(data);
+  //   }
   const openModal = () => {
     setIsModalOpen(!isModalOpen);
   };
 
   const closeModal = () => {
-    setIsModalOpen(false);// Clear the input after closing
+    setIsModalOpen(false); // Clear the input after closing
   };
 
   const saveChat = () => {
@@ -146,7 +146,6 @@ export default function ChatBoxPage({
       </div>
 
       {/* Floating Save Button */}
-      
 
       {isModalOpen ? (
         <div className="modal-overlay" onClick={closeModal}>
@@ -167,19 +166,21 @@ export default function ChatBoxPage({
                 marginBottom: "10px",
                 borderRadius: "4px",
                 border: "1px solid #ccc",
-                backgroundColor:'#333',
-                color: '#fff'
+                backgroundColor: "#333",
+                color: "#fff",
               }}
             />
             <button onClick={saveChat} style={{ padding: "8px 16px" }}>
               Save
             </button>
             <button onClick={closeModal} style={{ padding: "8px 16px" }}>
-                Close
+              Close
             </button>
           </div>
         </div>
-      ):<></>}
+      ) : (
+        <></>
+      )}
 
       {/* <div className="chat-actions">
         <input
@@ -192,9 +193,9 @@ export default function ChatBoxPage({
       </div> */}
 
       <div className="input-bar">
-      <button className="floating-save-button" onClick={openModal}>
-        💾
-      </button>
+        <button className="floating-save-button" onClick={openModal}>
+          💾
+        </button>
         <textarea
           rows={3}
           width="100%"

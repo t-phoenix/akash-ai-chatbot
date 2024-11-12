@@ -5,8 +5,9 @@
     justify-content: start;
     align-items: start;
     width: 100%;
-    height: 100%;
-    
+    height: 91.4vh;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .landing-title{
@@ -87,8 +88,12 @@
 }
 
 .color-bg2{
-    background-color: #ffc1e3;
+    background-color: #1ecbe1;
 }
+
+/* .color-bg2{
+  background-color: #f1f751;
+} */
 .card-icons{
     width: 90%;
     display: flex;
@@ -178,4 +183,15 @@
   .item-6{
     grid-row: 4 ;
     grid-column: 3 ;
+  }
+
+  .landing-footer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 12%;
+    padding-block: 6%;
+    background-color: #333;
   }

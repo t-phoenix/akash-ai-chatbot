@@ -2,6 +2,7 @@
 .App {
   font-family: Arial, sans-serif;
   max-width: 600px;
+  height: 100vh;
   margin: 0 auto;
   text-align: center;
   color: #ccc;
@@ -10,8 +11,8 @@
 
 @media (min-width: 600px) {
   .App{
-    border-width: 2px;
-    border-color: azure;
+    border-width: 1px;
+    border-color: rgb(107, 107, 107);
     border-style:dashed;
     border-radius: 24px;
   }
