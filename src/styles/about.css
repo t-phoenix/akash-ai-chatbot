@@ -1,40 +1,68 @@
-.about-page {
-    max-width: 600px;
-    min-height: 80vh;
+
+.main-page {
+    width: 100%;
     margin: 0 auto;
-    padding: 20px;
-    color: #ccc;
-    text-align: left;
-}
-
-.about-page h2 {
-    color: #007bff;
+    color: #ffffff;
+  }
+  
+  .main-page h1 {
     font-size: 24px;
-    margin-bottom: 15px;
-}
+    margin-top: 6%;
+    margin-bottom: 12%;
+    font-family: fantasy;
+  }
 
-.about-page h3 {
-    color: #007bff;
-    font-size: 20px;
-    margin-top: 20px;
-}
+.card {
+    background-color: #a0d9c8;
+    border-radius: 24px;
+    padding: 20px;
+    margin: 10px 6%;
+    color: #333;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    box-shadow: 1px -1px 4px 2px #a0d9c8;
+  }
 
-.about-page p {
-    font-size: 16px;
-    line-height: 1.5;
-    margin-bottom: 15px;
-}
+  .card-upper {
+    background-color: #d4aaff;
+    border-radius: 24px;
+    padding: 20px;
+    margin: 6% 6%;
+    color: #333;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    box-shadow: 1px -1px 4px 2px #d4aaff;
+  }
+  
+  .card-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+  }
 
-.about-page ul {
-    list-style-type: disc;
-    padding-left: 20px;
-}
-
-.about-page li {
-    margin-bottom: 8px;
-    font-size: 16px;
-}
-
-.about-page strong {
-    color: #007bff;
-}
+  .card-content h1 {
+    font-size: 48px;
+    margin: 0 0 20px 0px;
+  }
+  
+  .more-info {
+    margin-top: 15px;
+    margin-bottom: 30px;
+    font-size: 14px;
+    color: #333;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+  }
+  
+  .card.expanded {
+    background-color: #c0e7df;
+    height: auto;
+    border-radius: 12px;
+    padding: 20px;
+  }

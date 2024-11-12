@@ -13,7 +13,7 @@ import "./styles/header.css";
 // import ModelSelector from "./components/ModelSelector";
 import LandingPage from "./pages/LandingPage";
 import ChatBoxPage from "./pages/ChatBoxPage";
-import AboutPage from "./pages/About";
+import AboutPage from "./pages/AboutPage";
 import robot2 from "../src/illustrations/robot2.png";
 import { motion } from "framer-motion";
 import Sidebar from "./components/Sidebar";
