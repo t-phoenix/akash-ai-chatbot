@@ -140,10 +140,10 @@ function App() {
                     <li key={index} className="">
                       <span>{chat.name}</span>
                       <div>
-                        <button onClick={() => loadChat(chat)}>Load</button>
-                        <button onClick={() => deleteChat(chat.name)}>
+                        <motion.button whileHover={{scale: 1.1}} whileTap={{scale:0.9}} onClick={() => loadChat(chat)}>Load</motion.button>
+                        <motion.button whileHover={{scale: 1.1}} whileTap={{scale:0.9}} onClick={() => deleteChat(chat.name)}>
                           Delete
-                        </button>
+                        </motion.button>
                       </div>
                     </li>
                   ))}

@@ -35,7 +35,8 @@ const MessageFormatter = ({ message }) => {
 // Inline styling
 const styles = {
   messageBox: {
-    backgroundColor: '#f1f1f1',
+    backgroundColor: '#333',
+    color: '#fff',
     padding: '15px',
     borderRadius: '8px',
     fontFamily: 'Arial, sans-serif',

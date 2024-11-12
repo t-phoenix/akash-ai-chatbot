@@ -3,6 +3,7 @@ import React from 'react';
 import userbot from '../illustrations/Rectangle_59.png';
 import chatbot from '../illustrations/Rectangle_63.png'
 import MessageFormatter from './MessageFormatter';
+import "../styles/message.css";
 // import './ChatMessage.css';
 
 const ChatMessage = ({ role, content }) => {

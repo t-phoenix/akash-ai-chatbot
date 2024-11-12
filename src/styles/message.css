@@ -64,7 +64,6 @@
   
   .chat-message.bot {
     align-self: flex-start;
-    
     color: #333;
     text-align: left;
     max-width: 94%;
