@@ -1,79 +1,66 @@
-# Getting Started with Create React App
+# 🤖Akash AI Chatbot
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 🚀Introduction
+Akash AI is an innovative, interactive chatbot application built with React and powered by the Akash Chat API. Designed with a user-centric approach, it provides a seamless experience across mobile and desktop devices. Akash AI integrates advanced language models to deliver human-like conversations, enabling users to ask questions, seek information, and engage in dynamic discussions on a wide array of topics.
 
-## Available Scripts
+## 🌈Key Features
 
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1.	Smooth API Integration: Utilizing the Akash Chat API, Akash AI is capable of responding intelligently to a wide range of inquiries. The API integration ensures high-quality responses and a dynamic conversational flow. Users can also opt out from the given AI Models from Akash chat API:
+    - Meta-Llama-3-1-8B-Instruct-FP8
+    - Meta-Llama-3-1-405B-Instruct-FP8
+    - Meta-Llama-3-2-3B-Instruct
+    - nvidia-Llama-3-1-Nemotron-70B-Instruct-HF
+2.	Responsive Mobile-First Design: Optimized for mobile screens, Akash AI provides a clean and engaging user interface, centered for optimal readability and accessibility.
+3.	Saved Conversations: Users can save multiple chat sessions on their devices locally, allowing for quick retrieval and continuity.
+4.	Dynamic Chat Interface: The ChatBoxPage component houses the core chat interface, where users can interact with the chatbot. Users can choose from their saved chat helping with quick responses, smooth updates, and a more personalized feel for each conversation.
 
 
-## DOCKER
+## 🔗Links
+Akash Deployment Link
+```
+```
+
+Vercel Deployment
+```
+https://akash-ai-chatbot.vercel.app/
+```
+
+Video Link
+```
+```
+
+
+
+## 🏃‍♂️How to Start 
+
+1. Clone the repository
+```
+git clone https://github.com/t-phoenix/akash-ai-chatbot.git
+```
+
+2. Install node dependencies
+```
+yarn install
+```
+
+3. Start the frontend server
+```
+yarn start
+```
+
+4. Open the url in your browser, if it dosen't itself. Usually
+```
+http://localhost:3000/
+```
+
+
+## 🐳Docker
 
 Build Image
 `docker build --pull --rm -f "Dockerfile" -t akashaichatbot:latest "." --platform linux/amd64`
 
 push image
 `docker image push docker.io/abhinil/akashaichatbot:latest `
+
+deploying on Akash
+
