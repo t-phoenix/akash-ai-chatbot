@@ -4,6 +4,7 @@ import ChatMessage from "../components/ChatMessage";
 import "../styles/message.css";
 import "../styles/loader.css";
 import { useLocation } from "react-router-dom";
+import { API_KEY, BASE_URL } from "../helper/api";
 
 export default function ChatBoxPage({
   selectedModel,
@@ -24,8 +25,8 @@ export default function ChatBoxPage({
   const [input, setInput] = useState(data);
 
   // URL AND API KEY
-  const API_KEY = "sk-TADQ3qUJSc_ZgGywE4x2Tg"; // Replace with your API key
-  const BASE_URL = "https://chatapi.akash.network/api/v1";
+  // const API_KEY = "sk-TADQ3qUJSc_ZgGywE4x2Tg"; // Replace with your API key
+  // const BASE_URL = "https://chatapi.akash.network/api/v1";
 
   //   if (data) {
   //     setInput(data);

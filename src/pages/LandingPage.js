@@ -68,7 +68,7 @@ export default function LandingPage() {
             <MdArrowOutward style={{ fontSize: "30px" }} />
           </div>
 
-          <h1 style={{ width: "80%", paddingInline: "4%" }}>Chat with AI</h1>
+          <h1 style={{ width: "90%", paddingInline: "4%", fontSize: '40px' }}>Chat with AI</h1>
         </motion.div>
 
         <div className="card2-grid">
@@ -124,7 +124,7 @@ export default function LandingPage() {
           }}
         >
           <h2>Quick Prompts</h2>
-          <p>See All</p>
+          <motion.p onClick={()=>navigate("/prompts")} whileHover={{scale: 1.2, color: '#b2ff59'}}>See All</motion.p>
         </div>
 
         <div

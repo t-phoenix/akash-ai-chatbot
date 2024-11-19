@@ -17,6 +17,7 @@ import AboutPage from "./pages/AboutPage";
 import robot2 from "../src/illustrations/robot2.png";
 import { motion } from "framer-motion";
 import Sidebar from "./components/Sidebar";
+import PromptsPage from "./pages/PromptsPage";
 
 function App() {
   const sidebarRef = useRef();
@@ -144,6 +145,7 @@ function App() {
             }
           />
           <Route path="/about" element={<AboutPage/>}/>
+          <Route path="/prompts" element={<PromptsPage/>}/>
         </Routes>
       </div>
     </div>

@@ -45,6 +45,14 @@ export default function Sidebar({
               <MdChat size={28} style={{ marginRight: "6px" }} />
               ChatBot
             </Link>
+            <Link
+              className="nav-link"
+              style={{ color: "#e27b62" }}
+              to="/prompts"
+            >
+              <MdChat size={28} style={{ marginRight: "6px" }} />
+              Prompts
+            </Link>
             <Link className="nav-link" style={{ color: "#1ecbe1" }} to="/about">
               <MdRecentActors size={28} style={{ marginRight: "6px" }} />
               About
