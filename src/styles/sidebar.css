@@ -3,7 +3,6 @@
     .sidebar.open {
       width: 340px;
       top: 8%;
-      left: 10;
       position: fixed;
       height: 80%;
       background-color: #404040;
@@ -26,10 +25,10 @@
 
     .sidebar.open-full{
       width: 320px;
-      top: 8%;
-      left: 1px;
-      position: fixed;
-      height: 80%;
+      left: 0px;
+      top: 0px;
+      position:absolute;
+      height: 96%;
       background-color: #404040;
       color: #ffffff;
       transform: translateY(0%);

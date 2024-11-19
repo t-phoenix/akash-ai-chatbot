@@ -25,7 +25,7 @@ export default function Sidebar({
   const isMobile = useMediaQuery({maxWidth: "600px"});
   const isTab = useMediaQuery({maxWidth: "992px"});
   return (
-    <div ref={sidebarRef} className={`sidebar open`}>
+    <div ref={sidebarRef} className={isTab ? `sidebar open` : `sidebar open-full`}>
       <div style={{ width: "100%" }}>
         {/* TITLE */}
         <div className="sidebar-title">

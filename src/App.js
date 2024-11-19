@@ -22,7 +22,7 @@ import { useMediaQuery } from "react-responsive";
 
 function App() {
   // const isMobile = useMediaQuery({maxWidth: "600px"});
-  // const isTab = useMediaQuery({maxWidth: "992px"});
+  const isTab = useMediaQuery({maxWidth: "992px"});
 
   const sidebarRef = useRef();
 
@@ -43,7 +43,7 @@ function App() {
   useEffect(() => {
     const handleClickOutside = (event) => {
       // Check if the click is outside the sidebar
-      if (sidebarRef.current && !sidebarRef.current.contains(event.target)) {
+      if (isTab && sidebarRef.current && !sidebarRef.current.contains(event.target)) {
         setIsSidebarOpen(false); // Close the sidebar
       }
     };
