@@ -23,6 +23,30 @@
       overflow-y:auto;
       overflow-x: hidden;
     } 
+
+    .sidebar.open-full{
+      width: 320px;
+      top: 8%;
+      left: 1px;
+      position: fixed;
+      height: 80%;
+      background-color: #404040;
+      color: #ffffff;
+      transform: translateY(0%);
+      transition: transform 2s ease;
+      z-index: 10;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: start;
+      border-radius: 0px 0px 0px 0px;
+      border-style: dotted;
+      border-width: 1px;
+      border-color: antiquewhite;
+      overflow-y:auto;
+      overflow-x: hidden;
+    }
     
     .sidebar-title{
         display: flex;

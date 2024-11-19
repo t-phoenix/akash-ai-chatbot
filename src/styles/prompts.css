@@ -5,8 +5,10 @@
     justify-content: start;
     align-items: start;
     width: 90%;
-    height: 91.4vh;
     padding-inline: 4%;
+    height: 91.4vh;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .prompt-page h1{
@@ -16,8 +18,8 @@
 
 .navbar-container {
     width: 100%;
-    overflow-x: auto;
-    white-space: nowrap;
+    height: 8%;
+    
     padding: 10px 0;
   }
 
@@ -25,6 +27,8 @@
    display: flex;
    gap: 20px;
    padding: 0 10px;
+   overflow-x: auto;
+    white-space: nowrap;
   }
   
   .option-button {
@@ -79,6 +83,7 @@
     flex-direction: row;
     justify-content: start;
     align-items: center;
+    width: 80%;
   }
 
   .generate-box{

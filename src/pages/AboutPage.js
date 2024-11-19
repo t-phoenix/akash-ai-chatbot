@@ -82,7 +82,7 @@ const AboutPage = () => {
         {expandedCard === 3 && (
           <div className="more-info">
             <p>Have questions or feedback? Reach out to us at:</p>
-            <p><strong>Email:</strong> support@akashai.com</p>
+            <p><strong>Email:</strong> support@akash.network</p>
           </div>
         )}
       </motion.div>

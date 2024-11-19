@@ -18,6 +18,7 @@ Akash AI is an innovative, interactive chatbot application built with React and 
 ## 🔗Links
 Akash Deployment Link
 ```
+9fnduvf9q1b9ndbjfpmkhvlfs4.ingress.brixzen.my.id
 ```
 
 Vercel Deployment
@@ -27,6 +28,7 @@ https://akash-ai-chatbot.vercel.app/
 
 Video Link
 ```
+https://youtu.be/JgAyKraiK2E?si=QNc6JPZXjI9Z0EZT
 ```
 
 

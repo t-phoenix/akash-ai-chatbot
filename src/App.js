@@ -18,8 +18,12 @@ import robot2 from "../src/illustrations/robot2.png";
 import { motion } from "framer-motion";
 import Sidebar from "./components/Sidebar";
 import PromptsPage from "./pages/PromptsPage";
+import { useMediaQuery } from "react-responsive";
 
 function App() {
+  // const isMobile = useMediaQuery({maxWidth: "600px"});
+  // const isTab = useMediaQuery({maxWidth: "992px"});
+
   const sidebarRef = useRef();
 
   const navigate = useNavigate();

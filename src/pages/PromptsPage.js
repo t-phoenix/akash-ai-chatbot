@@ -20,7 +20,7 @@ export default function PromptsPage() {
     { role: "system", content: "Hello! Ask me anything." },
   ]);
   const [subNav, setSubNav] = useState("General");
-  const [selectedData, setSelectedData] = useState(ContentData);
+  const [selectedData, setSelectedData] = useState(GeneralData);
   const [generatedPrompt, setGeneratedPrompt] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const data = [

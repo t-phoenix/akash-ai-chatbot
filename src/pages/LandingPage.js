@@ -116,11 +116,14 @@ export default function LandingPage() {
       <div className="prompt-box">
         <div
           style={{
-            width: "100%",
+            width: "94%",
             display: "flex",
             flexDirection: "row",
             justifyContent: "space-between",
             alignItems: "center",
+            paddingBlock: "10px",
+            paddingInline: "10px",
+            marginLeft: '10px'
           }}
         >
           <h2>Quick Prompts</h2>
@@ -217,8 +220,7 @@ export default function LandingPage() {
       </div>
 
       <div className="landing-footer">
-          <p style={{margin: '2px', display:'flex', flexDirection: 'row', alignItems:'center'}}>Akash AI<MdCopyright size={16} style={{marginRight:'6px'}}/> 2024</p>
-          <p style={{margin: '2px'}}>Cookie Preferences</p>
+          <p style={{margin: '2px', display:'flex', flexDirection: 'row', alignItems:'center'}}>Copyright<MdCopyright size={16} style={{marginRight:'6px'}}/> 2024 Akash AI Chatbot</p>
       </div>
     </div>
   );

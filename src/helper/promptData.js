@@ -56,7 +56,7 @@ export const ContentData =[
         id: 3,
         color: "#e27b62",
         icon: "🎭",
-        text: "Help me draft an email to my professor about missing a deadline.”",
+        text: "Help me draft an email to my professor about missing a deadline.",
       },
 ]
 

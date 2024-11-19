@@ -11,6 +11,7 @@ import {
   MdRecentActors,
 } from "react-icons/md";
 import robot2 from "../illustrations/robot2.png";
+import { useMediaQuery } from "react-responsive";
 
 export default function Sidebar({
   sidebarRef,
@@ -21,6 +22,8 @@ export default function Sidebar({
   loadChat,
   deleteChat,
 }) {
+  const isMobile = useMediaQuery({maxWidth: "600px"});
+  const isTab = useMediaQuery({maxWidth: "992px"});
   return (
     <div ref={sidebarRef} className={`sidebar open`}>
       <div style={{ width: "100%" }}>
